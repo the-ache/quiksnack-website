@@ -22,9 +22,15 @@ Homepage for **QuikSnack**: vending machine placement and restocking for workpla
 3. To preview locally, open `index.html` in a browser, or run `python3 -m http.server` and visit http://localhost:8000.
 4. Commit and push to `main`. GitHub Pages redeploys automatically in about a minute.
 
+## Contact form
+The form is connected to **Formspree** (form ID `xjykljbb`, endpoint `https://formspree.io/f/xjykljbb`). Submissions are emailed to **scott@quiksnack.com**.
+- Fields: `name`* and `email`* (required), plus `phone`, `company`, `location`, `option`, and `message`. The subject line is set by a hidden `_subject` field ("New QuikSnack website inquiry"). Because the email field is named `email`, Formspree sets it as the reply-to.
+- Spam protection: a hidden honeypot field named `_gotcha`. Submissions that fill it in are dropped.
+- With JavaScript, the page submits the form in the background and shows a thank-you message in place, or an error with the phone number and email. Without JavaScript, it posts normally to Formspree's own thank-you page.
+- To change where submissions go, or to see past submissions, log in to Formspree. The page doesn't need to change.
+
 ## Not done yet
-- **The contact form is not hooked up.** It's a placeholder, and submitting it only shows a message on the page. Before launch, connect it to a form service (for example Formspree or Netlify Forms) or a small backend. The phone, text, and email links do work.
 - **No custom domain yet.** There is no `CNAME` file, and quiksnack.com's DNS still points at the old GoDaddy site.
-- The photo placeholders need real photos of QuikSnack machines.
+- The hero and gallery use illustrations. Swap in real photos of QuikSnack machines when they're available.
 
 © 2026 QuikSnack
