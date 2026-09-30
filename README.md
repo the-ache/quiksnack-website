@@ -1,6 +1,6 @@
 # QuikSnack website
 
-Homepage for **QuikSnack**: vending machine placement, stocking, and remote monitoring for workplaces in Huntsville and Madison, Alabama. This is the "Fresh Break" rebrand (coral, navy, cream, green, and yellow, set in Fredoka and Inter).
+Homepage for **QuikSnack**: vending machine placement and restocking for workplaces in Huntsville and Madison, Alabama. This is the "Fresh Break" rebrand (coral, navy, cream, green, and yellow, set in Fredoka and Inter).
 
 - **Live preview:** https://the-ache.github.io/quiksnack-website/ (GitHub Pages)
 - **Brand rules:** [docs/style-guide.md](docs/style-guide.md)

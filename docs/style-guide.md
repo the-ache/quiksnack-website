@@ -138,7 +138,7 @@ All buttons share these specs:
   - **Option 1:** people pay at the machine.
   - **Option 2:** company benefit, with the business billed on one monthly invoice.
 - **Key facts to reuse:**
-  - Remotely monitored
+  - Locally owned & operated
   - Healthy and indulgent snacks
   - Apple Pay, Google Pay, cards, cash, and coins
   - Serving Huntsville and Madison, AL
