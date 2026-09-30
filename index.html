@@ -8,7 +8,11 @@
 <meta property="og:title" content="QuikSnack | Your breakroom, fully stocked.">
 <meta property="og:description" content="Vending machine placement and restocking for Huntsville &amp; Madison, AL workplaces.">
 <meta name="theme-color" content="#1F2A44">
-<meta property="og:image" content="https://the-ache.github.io/quiksnack-website/assets/A-happy-vendy-lockup.png">
+<meta property="og:image" content="https://the-ache.github.io/quiksnack-website/assets/hero-vending-machine.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="Illustration of a QuikSnack-style snack and drink vending machine in an office breakroom">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -82,8 +86,8 @@ p{margin:0 0 1em}
 .hero-visual{position:relative}
 .chip{position:absolute;display:flex;align-items:center;gap:10px;background:var(--white);color:var(--navy);font-weight:600;font-size:.92rem;padding:10px 16px;border-radius:999px;box-shadow:var(--shadow)}
 .chip .dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px var(--green-soft)}
-.chip-1{top:22px;left:-24px}
-.chip-2{bottom:28px;right:-18px}
+.chip-1{top:-18px;left:-24px}
+.chip-2{bottom:-18px;right:-18px}
 .blob{position:absolute;border-radius:50%;z-index:-1}
 .blob-1{width:420px;height:420px;background:var(--yellow-soft);right:-120px;top:-80px}
 .blob-2{width:220px;height:220px;background:var(--coral-soft);left:-80px;bottom:-60px}
@@ -92,7 +96,10 @@ p{margin:0 0 1em}
 .ph{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;border:3px dashed rgba(31,42,68,.35);border-radius:var(--radius);background:repeating-linear-gradient(135deg,var(--yellow-soft) 0 18px,#FFF6DD 18px 36px);color:var(--navy);font-weight:600}
 .ph small{font-weight:500;color:var(--ink-muted);font-size:.85rem}
 .ph svg{width:44px;height:44px;opacity:.8}
-.ph-hero{aspect-ratio:4/5;min-height:420px}
+/* Hero illustration: source is 1280x720 with the machine centered at ~51.6% x (x 385-935, y 60-670).
+   A 1:1 slot keeps the whole machine plus a margin; 53.6% horizontal aligns the crop on the machine. */
+.hero-media{display:block;width:100%;aspect-ratio:1/1;border-radius:var(--radius);overflow:hidden;background:#FFF3DD;box-shadow:var(--shadow)}
+.hero-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:53.6% 50%}
 .ph-wide{aspect-ratio:16/10}
 
 /* Steps */
@@ -200,7 +207,7 @@ textarea{min-height:110px;resize:vertical}
 @media (max-width:980px){
   .hero .wrap,.split,.contact{grid-template-columns:minmax(0,1fr)}
   .hero-visual{max-width:520px}
-  .ph-hero{aspect-ratio:4/3;min-height:0}
+  .hero-media{aspect-ratio:4/3}
   .proof-grid{grid-template-columns:1fr 1fr}
   .chip-1{left:12px}.chip-2{right:12px}
 }
@@ -221,6 +228,10 @@ textarea{min-height:110px;resize:vertical}
   .cta-row .btn{width:100%}
   .btn-sm{padding:10px 16px;font-size:.95rem}
   .cookie{right:16px;max-width:none}
+  .chip{font-size:.8rem;padding:8px 12px}
+  .chip-1{top:-22px}
+  .chip-2{bottom:-22px}
+  .hero-visual{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
@@ -258,11 +269,10 @@ textarea{min-height:110px;resize:vertical}
         <p class="hero-call">Prefer to talk? Call <a href="tel:+12565095670">256-509-5670</a></p>
       </div>
       <div class="hero-visual">
-        <div class="ph ph-hero" role="img" aria-label="Photo placeholder: your QuikSnack machine">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1F2A44" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2.5l1.5-2h6l1.5 2H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="4"/></svg>
-          <span>Photo: your QuikSnack machine here</span>
-          <small>Replace with a real photo of an installed machine</small>
-        </div>
+        <picture class="hero-media">
+          <source type="image/webp" srcset="assets/hero-vending-machine-800.webp 800w, assets/hero-vending-machine.webp 1280w" sizes="(max-width: 980px) 125vw, 860px">
+          <img src="assets/hero-vending-machine.jpg" width="1280" height="720" alt="Illustration of a QuikSnack-style snack and drink vending machine in an office breakroom" fetchpriority="high" decoding="async">
+        </picture>
         <div class="chip chip-1"><span class="dot"></span>Remotely monitored</div>
         <div class="chip chip-2">Apple Pay · Google Pay · Cards · Cash</div>
       </div>
